@@ -5,8 +5,7 @@ const PORT = process.env.PORT || 4000;
 
 
 // CONTROLLERS
-const sequencesCtrl = require('./controllers/sequencesController')
-const posesCtrl = require('./controllers/posesController');
+
 
 // VIEW ENGINE
 app.set('view engine', 'ejs');
@@ -40,8 +39,27 @@ app.get('/about', (req, res) => {
     res.render('about');
 });
 
+// Login Route
+app.get('/login', (req, res) => {
+    res.render('login');
+});
 
 
+// Signup Route
+app.get('/signup', (req, res) => {
+    res.render('signup');
+});
+
+// Home (Root) Route
+app.get('/sea', (req, res) => {
+    res.render('seaworld');
+});
+
+
+// Home (Root) Route
+app.get('/pets', (req, res) => {
+    res.render('house');
+});
 
 
 // ----------------------------- SERVER LISTENER ------------------------------ //

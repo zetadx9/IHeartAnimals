@@ -31,13 +31,26 @@
                     </li>
         </nav>
        </header>
-    <!-- Title of Page  -->
-    <h1>I-HEART-ANIMALS</h1>
-    <h2>About</h2>
-    <div>
-        <img src="https://i.gifer.com/Esii.gif" alt="">
-    </div>
+        <div class="container"> 
+          <h1><%= title %></h1> 
+          <div class="datails"> 
+            <div class="card text-xs-center"> 
+                <br> 
+              <img class="card-img-top" src="<%= avatar %>" 
+                alt="Card image cap"> 
+                <div class="card-block"> 
+                  <h4 class="card-title">User Details</h4> 
+                  <p class="card-text"> 
+                      <strong>Name</strong>: <%= user.local.name %><br> 
+                      <strong>Email</strong>: <%= user.local.email %> 
+                  </p> 
+                  <a href="/logout" class="btn btn-default">Logout</a> 
+                </div> 
+            </div> 
+          </div> 
+       </div> 
 
+          
 
     <footer class="footer"> 
         <div class="container"> 
