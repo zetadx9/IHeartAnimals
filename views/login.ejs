@@ -6,9 +6,17 @@
     <title>Document</title>
     <!-- CSS -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/
-    ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css'>
+       ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css'>
    <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="stylesheet" href="/Styles/index.css">
+    <link rel="stylesheet" href="/Styles/login.css">
+
+
+          <!-- JS Scripts -->
+          <script src='https://cdnjs.cloudflare.com/ajax/libs
+          /jquery/2.2.1/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/
+         twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js'></script>
 </head>
 <body>
     <header>
@@ -23,7 +31,7 @@
                    </li>
                    
                     <li class="nav-item">
-                        <a href="/signup" class="nav-link">Signup</a>
+                        <a href="/signup" class="nav-link">Sign Up</a>
                     </li>
     
                     <li class="nav-item" class="nav-link">
@@ -31,22 +39,39 @@
                     </li>
         </nav>
        </header>
-  
-            <form class="form-signin" action="/login" method="post"> 
-            <h2 class="form-signin-heading">Welcome sign in</h2> 
-            <label for="inputEmail" class="sr-only">Email address</label> 
-            <input type="email" id="email" name="email" class="form-
-              control" placeholder="Email address" required=""> 
-            <label for="inputPassword" class="sr-only">Password</label> 
-            <input type="password" id="password" name="password"
-             class="form-control" placeholder="Password" required=""> 
-            <button class="btn btn-lg btn-primary btn-block" 
-               type="submit">Sign in</button> 
-            <br> 
-            <p>Don't have an account? <a href="/signup">Signup</a> 
-               ,it's free.</p> 
-          </form> 
-        </div> 
+
+
+<!-- Sign in form https://freefrontend.com/bootstrap-login-forms/ -->
+       <div class="container">
+        <div class="row">
+          <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+              <div class="card-body">
+                <h2 class="form-signin-heading">Sign In</h2>
+                <form class="form-signin">
+                  <div class="form-label-group">
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                    <label for="inputEmail">Email address</label>
+                  </div>
+    
+                  <div class="form-label-group">
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    <label for="inputPassword">Password</label>
+                  </div>
+    
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Remember password</label>
+                  </div>
+                  <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+                  <p>Don't have an account? <a href="/signup">Signup</a>
+                </form>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
  
         <footer class="footer"> 
             <div class="container"> 
