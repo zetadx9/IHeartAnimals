@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../models');
+const bcrypt = require('bcryptjs');
+const hash = require('hash')
+const db = require('../models/')
 
 // CURRENT PATH = '/profile
 
