@@ -6,14 +6,22 @@ const db = require('../models/')
 
 // CURRENT PATH = '/profile
 
-router.get('/', (req, res) => {
-  db.User.findById(req.session.currentUser._id, (err, foundUser) => {
-    if (err) return console.log(err);
+// Login Form Route
 
-    res.render('users/profile', {
-      user: foundUser,
+router.get('/', (req, res) => {
+    console.log('Req Session = ', req.session);
+  
+    if (!req.session.currentUser) return res.redirect('/login');
+    db.User.findById(req.session.currentUser._id, (err, foundUser) => {
+        if (err) return console.log(err);
+    
+        res.render('users/profile', {
+          user: foundUser,
+        });
+      });
     });
-  });
-});
+    
+
+
 
 module.exports = router;

@@ -18,7 +18,11 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     minlength: 4,
-  }
+  },
+  image: {
+    type: String,
+    required: true,
+  },
 }, {timestamps: true});
 
 module.exports = mongoose.model('User', userSchema);
