@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS -->
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/
+    ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css'>
+   <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/Styles/index.css">
+
+              <!-- JS Scripts -->
+              <script src='https://cdnjs.cloudflare.com/ajax/libs
+              /jquery/2.2.1/jquery.min.js'></script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/
+             twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js'></script>
+             <script defer src="/js/app.js"></script>
+
+</head>
+<body>
+    <!-- Background Music -->
+    <iframe style="display: none;" width="560" height="315" src="https://youtu.be/p2oTByT6KNc" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    
+   <header>
+    <nav class="navbar"> 
+      <ul class="nav-list">
+               <li class="nav-item">
+               <a href="/sea" class="nav-link">Sea World</a>
+                </li>
+                 <li class="nav-item">
+                     <a class="nav-link" href="/">Home</a>
+                   </li>
+                   <li class="nav-item" class="nav-link">
+                      <a href="/about" class="nav-link">About</a>
+                  </li>
+                   <li class="nav-item">
+                      <a class="nav-link" href="/register">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/login">Login</a>
+                    </li>
+                   <li class="nav-item">
+                     <a class="nav-link" href="/animals">Animals</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" href="/animals/new">New Animal</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" href="/articles">Articles</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" href="/articles/new">New Article</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" href="/logout">Logout</a>
+                  </li>
+  </nav>
+   </header>
+   <main class="container h-100 mt-5">
+
+    <h2><%= animal.name %></h2>
+    
+    <p>created: <%= new Date(animal.createdAt).toLocaleDateString() %></p>
+
+    <!-- <form style="display: inline;" action="/animals/<%= animal._id %>?_method=DELETE" method="POST"> -->
+      <button id="<%= animal._id %>" class="btn btn-danger btn-sm delete" type="submit">Delete</button>
+    <!-- </form> -->
+
+
+    <a href="/animals/<%= animal._id %>/edit">
+      <button class="btn btn-info btn-sm">Edit</button>
+    </a>
+
+    <section class="mt-4">
+      <h2>Animals by this animal</h2>
+      <ul>
+        <% animal.articles.forEach((article, i) => { %>
+        <li><%= i %>. <a href="/articles/<%= article._id %>"><%= article.title %></a></li>
+        <% }) %>
+      </ul>
+    </section>
+    
+    
+  </main>
+
+    <footer class="footer"> 
+        <div class="container"> 
+            <span>&copy2020 I-Heart-Animals General Assembly</span> 
+        </div> 
+    </footer> 
+</body>
+</html>

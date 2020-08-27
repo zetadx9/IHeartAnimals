@@ -57,29 +57,18 @@
                     </li>
     </nav>
    </header>
-    <!-- Title of Page  -->
-        <!-- Front Cover -->
-        <section id="home" class="hero">
-            <div class="title">
-              <h1>I Heart Animals</h1>
-              <p id="color">"Animals We Love"</p>
-            </div>
-          </section>
+   <main class="container h-100 mt-5">
+    <h1>Edit Animal Page</h1>
 
-           <!-- Animals We Love GALLERY -->
-    <section id="Skills" class="container">
-        <h2 class="under"></h2>
-        <br>
-        <div class="skills-gallery">
-          <img src="https://images.unsplash.com/photo-1528817607141-85707cede2af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="HTML">
-          <img src="https://images.unsplash.com/photo-1527161153332-99adcc6f2966?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="HTML">
-          <img src="https://images.unsplash.com/photo-1527073620320-77635188c627?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="HTML">
-          <img src="https://images.unsplash.com/photo-1440191995729-669fdeb36791?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="HTML">
-          <img src="https://images.unsplash.com/photo-1491244470931-f7d07cdf2f0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="HTML">
-          <img src="https://images.unsplash.com/photo-1498903891748-110dc39423d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="HTML">
+    <form action="/animals/<%= animal._id %>?_method=PUT" method="POST">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input class="form-control" type="text" id="name" name="name" value="<%= animal.name %>" />
+      </div>
 
-        </div>
-    </section>
+      <button class="btn btn-primary float-right" type="submit">Edit Animal</button>
+    </form>
+  </main>
 
     <footer class="footer"> 
         <div class="container"> 

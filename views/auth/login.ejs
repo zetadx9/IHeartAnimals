@@ -9,6 +9,8 @@
     ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css'>
    <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="stylesheet" href="/Styles/index.css">
+    <link rel="stylesheet" href="/Styles/login.css">
+
 
               <!-- JS Scripts -->
               <script src='https://cdnjs.cloudflare.com/ajax/libs
@@ -57,29 +59,43 @@
                     </li>
     </nav>
    </header>
-    <!-- Title of Page  -->
-        <!-- Front Cover -->
-        <section id="home" class="hero">
-            <div class="title">
-              <h1>I Heart Animals</h1>
-              <p id="color">"Animals We Love"</p>
-            </div>
-          </section>
 
-           <!-- Animals We Love GALLERY -->
-    <section id="Skills" class="container">
-        <h2 class="under"></h2>
-        <br>
-        <div class="skills-gallery">
-          <img src="https://images.unsplash.com/photo-1528817607141-85707cede2af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="HTML">
-          <img src="https://images.unsplash.com/photo-1527161153332-99adcc6f2966?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="HTML">
-          <img src="https://images.unsplash.com/photo-1527073620320-77635188c627?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="HTML">
-          <img src="https://images.unsplash.com/photo-1440191995729-669fdeb36791?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="HTML">
-          <img src="https://images.unsplash.com/photo-1491244470931-f7d07cdf2f0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="HTML">
-          <img src="https://images.unsplash.com/photo-1498903891748-110dc39423d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="HTML">
+   <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
 
-        </div>
-    </section>
+            <h2 class="form-signin-heading">Log In</h2>
+
+        <form class="form-signin" action="/login"  method="POST">
+            <div class="form-label-group">
+                <input type="text" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <label for="inputEmail">Email address</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <label for="inputPassword">Password</label>
+              </div>
+
+          <div class="custom-control custom-checkbox mb-3">
+            <input type="checkbox" class="custom-control-input" id="customCheck1">
+            <label class="custom-control-label" for="customCheck1">Remember password</label>
+          </div>
+          <button type="submit" class="btn btn-primary float-right">Login</button>
+          <p>Don't have an account? <a href="/signup">Signup</a>
+        </form>
+      </div>
+    </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
 
     <footer class="footer"> 
         <div class="container"> 
