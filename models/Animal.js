@@ -37,6 +37,14 @@ const animalSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  video: {
+    type: String,
+    required: true,
+  },
+  video: {
+    type: String,
+    required: true,
+  },
   articles: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Article'

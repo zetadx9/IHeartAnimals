@@ -20,7 +20,7 @@
 </head>
 <body>
     <!-- Background Music -->
-    <iframe style="display: none;" width="560" height="315" src="https://youtu.be/p2oTByT6KNc" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    <!-- <iframe style="display: none;" width="560" height="315" src="frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe> -->
     
    <header>
     <nav class="navbar"> 
@@ -97,7 +97,14 @@
 <br>
       <section>
         <h3 class="under">Video</h3>
-        <object width="425" height="344" data="https://www.youtube.com/embed/<%= animal.video %>"></object>
+        <div class="skills-gallery">
+        <section id="Skills" class="center2">
+
+        <object width="418" height="344" data="https://www.youtube.com/embed/<%= animal.video %>"></object>
+        <object width="418" height="344" data="https://www.youtube.com/embed/<%= animal.video2 %>"></object>
+
+        </section>
+        </div>
         </section>
 
 <br>
@@ -111,14 +118,16 @@
 <br>
 
 <h3 class="under">Photo Gallery</h3>
-    <div class="skills-gallery">
-    <section id="Skills">
-      <br>
+<section id="Skills" class="container">
+  <br>
+  <div class="skills-gallery">
         <img src="<%= animal.cardImage1 %>" alt="">
         <img src="<%= animal.cardImage2 %>" alt="">
         <img src="<%= animal.cardImage3 %>" alt="">
-      </div>
-    </div>
+
+  </div>
+        </section>
+    
 
   <p>created: <%= new Date(animal.createdAt).toLocaleDateString() %></p>
 
