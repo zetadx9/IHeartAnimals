@@ -98,4 +98,4 @@ app.use('/api/v1', apiCtrl);
 
 // ----------------------------- SERVER LISTENER ------------------------------ //
 
-app.listen(PORT, () => console.log('Server is running on port ${PORT}'));
+app.listen(process.env.PORT, () => console.log('Server is running on port ${PORT}'));
