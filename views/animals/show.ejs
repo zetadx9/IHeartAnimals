@@ -72,9 +72,28 @@
 
     <h3 class="Title"><%= animal.name %></h2>
     
-    <div>
-     <p><%= animal.body %></p>
-    </div>
+      <section>
+        <h3>"Description"</h3>
+        <p class="change1"> <%= animal.descript %>
+      </p>
+      </section>
+
+      <section>
+        <h3>“Diet”</h3>
+        <p class="change2"> <%= animal.diet %>
+      </p>
+      </section>
+
+      <section>
+        <h3>“Location”</h3>
+        <p class="change1"> <%= animal.location %>
+      </p>
+      </section>
+
+      <section>
+        <h3>“Video”</h3>
+        <object width="425" height="344" data="https://www.youtube.com/embed/<%= animal.video %>"></object>
+        </section>
     
     <section class="mt-4">
       <ul>

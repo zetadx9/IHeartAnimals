@@ -21,7 +21,19 @@ const animalSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  body: {
+  descript: {
+    type: String,
+    required: true,
+  },
+  diet: {
+    type: String,
+    required: true,
+  },
+  location: {
+    type: String,
+    required: true,
+  },
+  video: {
     type: String,
     required: true,
   },

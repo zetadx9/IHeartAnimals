@@ -7,8 +7,9 @@
     <!-- CSS -->
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/
     ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css'>
-   <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="stylesheet" href="/Styles/index.css">
+    <link rel="stylesheet" href="/Styles/login.css">
+
 
     <!-- JS Scripts -->
       <script src='https://cdnjs.cloudflare.com/ajax/libs
@@ -63,45 +64,73 @@
             </div>
           </section>
 
-   <main class="container h-100 mt-5">
 
-    <h1>Add New Animal</h1>
-
-    <form action="/animals" method="POST">
-      <div class="form-group">
-        <label for="name">Name</label>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="card card-signin my-5">
+            <div class="card-body">
+    <h2 class="under">Complete Form</h2>
+   <br>
+    <form class="form-signin" action="/animals" method="POST">
+      <label class="change1" id="under" for="name">Animal Name</label>
+      <div class="form-label-group">
         <input type="text" id="name" name="name" class="form-control" />
       </div>
-
-      <div class="form-group">
-        <label for="image">Image</label>
+    <br>
+    <label class="change2" id="under" for="image">Header Image</label>
+      <div class="form-label-group">
         <input type="text" id="image" name="image" class="form-control" />
       </div>
-
-      <div>
-        <label for="body">Content</label>
-        <textarea id="body" name="body"></textarea>
-      </div>
-
+  <br>
+      <label class="change1" id="under" for="descript">Animal Description</label>
       <div class="form-group">
-        <label for="image">Card Image 1</label>
+        <textarea cols="100" rows="5" id="descript" name="descript"></textarea>
+      </div>
+  <br>
+      <label class="change2" id="under" for="Diet">Animal Diet</label>
+      <div class="form-group">
+        <textarea cols="100" rows="5" id="diet" name="diet"></textarea>
+      </div>
+  <br>
+      <label class="change1" id="under" for="location">Animal Location</label>
+      <div class="form-group">
+        <textarea cols="100" rows="5" id="location" name="location"></textarea>
+      </div>
+  <br>
+      <label class="change2" id="under" for="video">Animal Video</label>
+      <h6>(Youtube videos only, add Id into box, not the entire url example "N4koEPJ0bjU" from "https://www.youtube.com/embed/N4koEPJ0bjU" or "https://www.youtube.com/embed/N4koEPJ0bjU"</h6>
+      <div class="form-label-group">
+        <input type="text" id="video" name="video" class="video" />
+      </div>
+  <br>
+
+  <label class="change1" id="under" for="image">Animal Image 1</label>
+      <div class="form-label-group">
         <input type="text" id="cardImage1" name="cardImage1" class="form-control" />
       </div>
+  <br>
 
-      <div class="form-group">
-        <label for="image">Card Image 2</label>
+  <label class="change2" id="under" for="image">Animal Image 2</label>
+      <div class="form-label-group">
         <input type="text" id="cardImage2" name="cardImage2" class="form-control" />
       </div>
+  <br>
 
-      <div class="form-group">
-        <label for="image">Card Image 3</label>
+     <label class="change1" id="under" for="image">Animal Image 3</label>
+      <div class="form-label-group">
         <input type="text" id="cardImage3" name="cardImage3" class="form-control" />
       </div>
 
       <button class="btn btn-primary float-right" type="submit">Add Animal</button>
     </form>
 
-  </main>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
 
 
     <footer class="footer"> 

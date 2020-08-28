@@ -1,4 +1,3 @@
-
 * {
     font-family: 'Roboto', sans-serif;
     padding: 0;
@@ -12,6 +11,13 @@ body{
     font-size: 15px;
 }
 
+.under{
+    text-decoration: underline;
+}
+
+#under{
+    text-decoration: underline;
+}
 
 .nav-list {
     display: flex;
@@ -42,7 +48,17 @@ body{
     color: #aaffaa;
    }
 
-   /* Hero */
+   /* Change */
+.change1{
+    background-color: #6fa76f;
+
+}
+.change2{
+    background-color: #537c53;
+
+}
+
+   /* Heart */
 
    .heart {
     width: 100vw;
@@ -53,6 +69,7 @@ body{
     background-size: cover;
     background-attachment: fixed ;
   }
+
   
   .title {
     background-color: rgba(65, 88, 67, 0.7);
