@@ -1,6 +1,6 @@
 # IHeartAnimals
 
-![alt text](https://github.com/zetadx9/IHeartAnimals/blob/master/image.jpg?raw=true)
+![alt text](https://github.com/zetadx9/IHeartAnimals/blob/master/image1.jpg?raw=true)
 
 
 Description - I Heart Animals is a website for all of the animal lovers to come a create biographies of there favorite animals. Users can signup, login, and create there animals. They can add images, descriptions, diet, location, videos, and more images for a gallery. This website was created with Javascript, CSS, Express, Mongoda, Mongoose, and ejs. 
