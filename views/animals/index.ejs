@@ -56,6 +56,7 @@
 
    </header>
 
+
               <!-- Front Cover -->
               <section id="home" class="heart">
                 <div class="title">
@@ -65,7 +66,7 @@
               </section>
    <main class="container h-100 mt-5">
 
-    <h2 class="mb-4">Animals</h2>
+    <h2 class="under">Animals Index</h2>
 
       <div class="card-deck">
         <% if (animals.length) { %>
@@ -73,9 +74,12 @@
     
             <!-- Card -->
     <section id="Skills" class="container">
-                <br>
-                <h5 class="card-title"><%= animal.name %></h5>
-                <a href="/animals/<%= animal._id %>" class="btn btn-primary float-right">View Details</a>
+        <h5 id="under" class="card-title"><em><%= animal.name %></em></h5>
+        <a href="/animals/<%= animal._id %>" class="btn btn-primary float-right">View Details</a>
+
+        <div class="skills-gallery">
+                <img class="center1" src="<%= animal.image %>" alt="">
+        </div>
     </section>
 
             <!-- End Card -->

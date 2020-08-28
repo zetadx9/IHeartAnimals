@@ -66,35 +66,41 @@
 
    <main class="container">
 
+  <h1 id="under" class="Title"><em><%= animal.name %></em></h1>
+
     <div class="skills-gallery">
    <img class="center" src="<%= animal.image %>" alt="">
    </div>
 
-    <h3 class="Title"><%= animal.name %></h2>
-    
+
+    <br>
       <section>
-        <h3>"Description"</h3>
+        <h3 class="under">Description</h3>
         <p class="change1"> <%= animal.descript %>
       </p>
       </section>
+<br>
 
       <section>
-        <h3>“Diet”</h3>
+        <h3 class="under">Diet</h3>
         <p class="change2"> <%= animal.diet %>
       </p>
       </section>
+<br>
 
       <section>
-        <h3>“Location”</h3>
+        <h3 class="under">Location</h3>
         <p class="change1"> <%= animal.location %>
       </p>
       </section>
 
+<br>
       <section>
-        <h3>“Video”</h3>
+        <h3 class="under">Video</h3>
         <object width="425" height="344" data="https://www.youtube.com/embed/<%= animal.video %>"></object>
         </section>
-    
+
+<br>
     <section class="mt-4">
       <ul>
         <% animal.articles.forEach((article, i) => { %>
@@ -102,15 +108,17 @@
         <% }) %>
       </ul>
     </section>
-    <section id="Skills" class="container">
-      <h2 class="under"></h2>
+<br>
+
+<h3 class="under">Photo Gallery</h3>
+    <div class="skills-gallery">
+    <section id="Skills">
       <br>
-      <div class="skills-gallery">
         <img src="<%= animal.cardImage1 %>" alt="">
         <img src="<%= animal.cardImage2 %>" alt="">
         <img src="<%= animal.cardImage3 %>" alt="">
       </div>
-  </section>
+    </div>
 
   <p>created: <%= new Date(animal.createdAt).toLocaleDateString() %></p>
 

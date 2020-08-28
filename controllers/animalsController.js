@@ -37,6 +37,8 @@ router.get('/new', (req, res) => {
 // Animals Show
 router.get('/:id', (req, res) => {
   // Query the database for the animal by ID
+  if (!req.session.currentUser) return res.redirect('/login');
+
   db.Animal.findById(req.params.id)
     .populate({path: 'articles'})
     .exec((err, foundAnimal) => {
@@ -74,6 +76,8 @@ router.post('/', (req, res) => {
 router.get('/:id/edit', (req, res) => {
   db.Animal.findById(req.params.id, (err, foundAnimal) => {
     if (err) return console.log(err);
+    if (!req.session.currentUser) return res.redirect('/login');
+
 
     res.render('animals/edit', {
       animal: foundAnimal,
@@ -86,6 +90,7 @@ router.get('/:id/edit', (req, res) => {
 router.put('/:id', (req, res) => {
   // Log the data from client
   console.log('Updated Animal = ', req.body);
+  
 
   db.Animal.findByIdAndUpdate(
     req.params.id,
@@ -105,8 +110,10 @@ router.delete('/:id', (req, res) => {
   console.log('Deleting Animal ID = ', req.params.id);
 
   db.Animal.findByIdAndDelete(req.params.id, (err, deletedAnimal) => {
+    
     if (err) return console.log(err);
     console.log('The deleted animal = ', deletedAnimal);
+    
     db.Article.deleteMany({
       _id: {
         $in: deletedAnimal.articles
