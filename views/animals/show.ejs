@@ -49,33 +49,60 @@
                    <li class="nav-item">
                      <a class="nav-link" href="/logout">Logout</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/profile">Profile</a>
+                 </li>
   </nav>
 
    </header>
-   <main class="container h-100 mt-5">
 
-    <h2><%= animal.name %></h2>
+              <!-- Front Cover -->
+              <section id="home" class="heart">
+                <div class="title">
+                  <h1>I Heart Animals</h1>
+                  <p id="color">Animal: <%= animal.name %></p>
+                </div>
+              </section>
+
+   <main class="container">
+
+    <div class="skills-gallery">
+   <img class="center" src="<%= animal.image %>" alt="">
+   </div>
+
+    <h3 class="Title"><%= animal.name %></h2>
     
-    <p>created: <%= new Date(animal.createdAt).toLocaleDateString() %></p>
-
-    <!-- <form style="display: inline;" action="/animals/<%= animal._id %>?_method=DELETE" method="POST"> -->
-      <button id="<%= animal._id %>" class="btn btn-danger btn-sm delete" type="submit">Delete</button>
-    <!-- </form> -->
-
-
-    <a href="/animals/<%= animal._id %>/edit">
-      <button class="btn btn-info btn-sm">Edit</button>
-    </a>
-
+    <div>
+     <p><%= animal.body %></p>
+    </div>
+    
     <section class="mt-4">
-      <h2>Animals by this animal</h2>
       <ul>
         <% animal.articles.forEach((article, i) => { %>
         <li><%= i %>. <a href="/articles/<%= article._id %>"><%= article.title %></a></li>
         <% }) %>
       </ul>
     </section>
+    <section id="Skills" class="container">
+      <h2 class="under"></h2>
+      <br>
+      <div class="skills-gallery">
+        <img src="<%= animal.cardImage1 %>" alt="">
+        <img src="<%= animal.cardImage2 %>" alt="">
+        <img src="<%= animal.cardImage3 %>" alt="">
+      </div>
+  </section>
+
+  <p>created: <%= new Date(animal.createdAt).toLocaleDateString() %></p>
+
+      <!-- <form style="display: inline;" action="/animals/<%= animal._id %>?_method=DELETE" method="POST"> -->
+        <button id="<%= animal._id %>" class="btn btn-danger btn-sm delete" type="submit">Delete</button>
+        <!-- </form> -->
     
+    
+        <a href="/animals/<%= animal._id %>/edit">
+          <button class="btn btn-info btn-sm">Edit</button>
+        </a>
     
   </main>
 

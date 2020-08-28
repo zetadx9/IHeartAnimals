@@ -47,7 +47,7 @@ body{
    .heart {
     width: 100vw;
     height: 75vh;
-    background-image: url('https://images.unsplash.com/photo-1449870107643-256a999b3527?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+    background-image: url('https://images.unsplash.com/photo-1527073620320-77635188c627?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60?w=100&h=200');
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;

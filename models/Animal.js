@@ -9,6 +9,18 @@ const animalSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  cardImage1: {
+    type: String,
+    required: true,
+  },
+  cardImage2: {
+    type: String,
+    required: true,
+  },
+  cardImage3: {
+    type: String,
+    required: true,
+  },
   body: {
     type: String,
     required: true,
