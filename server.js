@@ -7,11 +7,7 @@ require('dotenv').config();
 const mongoose = require('mongoose'); 
 const app = express();
 const PORT = process.env.PORT || 4000;
-require('dotenv').config()
 
-
-// connect Mongoose to your DB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/iheartanimals');
 
 
 
@@ -21,6 +17,7 @@ const articlesCtrl = require('./controllers/articlesController');
 const authCtrl = require('./controllers/authController');
 const usersCtrl = require('./controllers/usersController');
 const apiCtrl = require('./controllers/apiController');
+const houseCtrl = require('./controllers/houseController');
 
 
 // VIEW ENGINE
@@ -98,6 +95,9 @@ app.use('/profile', usersCtrl);
 
 // API Routes
 app.use('/api/v1', apiCtrl);
+
+app.use('/house', houseCtrl);
+
 
 
 // ----------------------------- SERVER LISTENER ------------------------------ //

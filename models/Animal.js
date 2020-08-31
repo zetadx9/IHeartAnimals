@@ -37,11 +37,11 @@ const animalSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  video: {
+  video2: {
     type: String,
     required: true,
   },
-  video: {
+  video3: {
     type: String,
     required: true,
   },

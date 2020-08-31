@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const connectionString = process.env.MONGODB_URI || 'mongodb://localhost:27017/iheartanimals';
+const connectionString = process.env.MONGODB_URI || 'mongodb://localhost:27017/chisme';
 
 mongoose.connect(connectionString, {
   useNewUrlParser: true,
@@ -11,8 +11,8 @@ mongoose.connect(connectionString, {
   .catch((err) => console.log(`MongoDB connection error: ${err}`))
 
 // --- EXPORT MODELS --- //
-module.exports = {
-    Animal: require('./Animal'),
-    Article: require('./Article'),
-    User: require('./User'),
-  };
+module.exports = { 
+Animal: require('./Animal'),
+Article: require('./Article'),
+User: require('./User'),
+}
